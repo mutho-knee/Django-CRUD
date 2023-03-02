@@ -12,10 +12,11 @@
                     <div class="col-6">
                         {% csrf_token %}
                         <fieldset class="form-group">
-                            <legend class="border-bottom mb-4">Join Now!</legend>
+                            <legend class="border-bottom mb-4">Login Now!</legend>
                             {{ form|crispy }}
                         </fieldset>
-                        <input class="btn-info" value="Register" type="submit">
+                        <input class="btn-info" value="Login" type="submit"><br>
+                        <a href="{% url 'register' %}">Don't have an account? Sign up</a>
                     </div>
                     <div class="col-3"></div>
                 </div>

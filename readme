@@ -1,9 +1,10 @@
 # To integrate mpesa into your project
     in the terminal, write pip install django-daraja
+                           python manage.py migrate
     create a file called .env
-        in settings, under installed apps add:
-            'morningdjangoProject',
-            'django_daraja',
+        in settings,
+         under installed apps add 'django_daraja',
+         allowed host[127.0.0.1]
     in .env, Enter the following details
         MPESA_ENVIRONMENT = sandbox(send money), live(pay bill)
         MPESA_CONSUMER_KEY = (get from daraja- create an app)
@@ -21,8 +22,8 @@
         from datetime import datetime
      Start of mpesa instances and variables
         cl = MpesaClient()
-        stk_push_callback_url = ""
-        b2c_callback_url = ""
+        stk_push_callback_url = 'https://api.darajambili.com/express-payment'
+        b2c_callback_url = ''
      End of mpesa instances and variables
       then go ahead to define the payment function
 # Generating forms
